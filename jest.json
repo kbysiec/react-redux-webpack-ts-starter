@@ -1,11 +1,11 @@
 {
   "verbose": true,
-  "moduleFileExtensions": ["ts", "tsx", "js", "jsx"],
+  "moduleFileExtensions": ["ts", "tsx", "js"],
   "transform": {
     "^.+\\.jsx?$": "<rootDir>/config/jest.babel.processor.setup.js",
     "^.+\\.tsx?$": "ts-jest"
   },
-  "testRegex": "/__tests__/(\\w+.)?(test|spec).(jsx?|tsx?)$",
+  "testRegex": "/__tests__/(\\w+.)?(test|spec).tsx?$",
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/config/",
