@@ -33,16 +33,7 @@ module.exports = (env = {}) => {
     },
     devtool: 'source-map',
     resolve: {
-      extensions: [
-        '.js',
-        '.jsx',
-        '.ts',
-        '.tsx',
-        '.scss',
-        '.less',
-        '.html',
-        '.json',
-      ],
+      extensions: ['.js', '.ts', '.tsx', '.scss', '.less', '.html', '.json'],
       modules: ['src', 'node_modules'],
     },
     optimization: {
@@ -73,12 +64,6 @@ module.exports = (env = {}) => {
       rules: [
         {
           enforce: 'pre',
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          use: 'eslint-loader',
-        },
-        {
-          enforce: 'pre',
           test: /\.tsx?$/,
           exclude: /node_modules/,
           use: {
@@ -88,32 +73,6 @@ module.exports = (env = {}) => {
               emitErrors: false,
             },
           },
-        },
-        {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          use: [
-            {
-              loader: 'babel-loader',
-              options: {
-                presets: [
-                  [
-                    '@babel/env',
-                    {
-                      targets: {
-                        browsers: VARS.supportedBrowsers,
-                      },
-                      useBuiltIns: VARS.useBabelPolyfill,
-                      debug: false,
-                    },
-                  ],
-                  '@babel/react',
-                ],
-                plugins: ['@babel/plugin-syntax-dynamic-import'],
-                cacheDirectory: true,
-              },
-            },
-          ],
         },
         {
           test: /\.tsx?$/,
