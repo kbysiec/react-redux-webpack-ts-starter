@@ -1,11 +1,12 @@
 {
   "verbose": true,
   "moduleFileExtensions": ["ts", "tsx", "js"],
+  "testURL": "http://localhost",
   "transform": {
     "^.+\\.jsx?$": "<rootDir>/config/jest.babel.processor.setup.js",
     "^.+\\.tsx?$": "ts-jest"
   },
-  "testRegex": "/__tests__/(\\w+.)?(test|spec).tsx?$",
+  "testRegex": "/__tests__/([a-zA-Z0-9]+.)?(test|spec).tsx?$",
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/config/",
@@ -31,8 +32,7 @@
   "setupFiles": ["<rootDir>/config/jest.stubs.setup.js"],
   "moduleNameMapper": {
     ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-      "<rootDir>/config/jest.stubs.setup.js"
+    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest.stubs.setup.js"
   },
   "coverageReporters": ["json", "lcov", "text", "html"]
 }
