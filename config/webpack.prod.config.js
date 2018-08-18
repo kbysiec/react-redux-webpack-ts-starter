@@ -93,7 +93,10 @@ module.exports = (env = {}) => {
                     },
                   ],
                 ],
-                plugins: ['@babel/plugin-syntax-dynamic-import'],
+                plugins: [
+                  '@babel/plugin-syntax-dynamic-import',
+                  '@babel/plugin-proposal-class-properties',
+                ],
                 cacheDirectory: true,
               },
             },
@@ -249,6 +252,11 @@ module.exports = (env = {}) => {
       ],
     },
     plugins: [
+      new webpack.DefinePlugin({
+        'process.env': {
+          NODE_ENV: JSON.stringify('production'),
+        },
+      }),
       new CleanWebpackPlugin([`${PATHS.dist}/**/*`], {
         root: PATHS.root,
       }),
