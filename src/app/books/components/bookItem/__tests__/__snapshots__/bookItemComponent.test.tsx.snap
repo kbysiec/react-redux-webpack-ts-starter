@@ -18,6 +18,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -279,7 +280,15 @@ ShallowWrapper {
           "componentDidUpdate": Object {
             "onSetState": true,
           },
+<<<<<<< HEAD:src/app/books/components/bookItem/__tests__/__snapshots__/bookItemComponent.test.tsx.snap
           "getSnapshotBeforeUpdate": true,
+=======
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+>>>>>>> npm-update:src-ts/app/books/components/bookItem/__tests__/__snapshots__/bookItemComponent.test.tsx.snap
         },
       },
     },
