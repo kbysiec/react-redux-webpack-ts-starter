@@ -96,20 +96,14 @@ ShallowWrapper {
           "componentDidUpdate": Object {
             "onSetState": true,
           },
-<<<<<<< HEAD:src/app/home/__tests__/__snapshots__/homeComponent.test.tsx.snap
-          "getSnapshotBeforeUpdate": true,
-=======
           "getDerivedStateFromProps": true,
           "getSnapshotBeforeUpdate": true,
           "setState": Object {
             "skipsComponentDidUpdateOnNullish": true,
           },
->>>>>>> npm-update:src-ts/app/home/__tests__/__snapshots__/homeComponent.test.tsx.snap
         },
       },
     },
-    "attachTo": undefined,
-    "hydrateIn": undefined,
   },
 }
 `;
