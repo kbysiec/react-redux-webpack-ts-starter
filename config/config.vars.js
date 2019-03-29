@@ -9,27 +9,27 @@ const projectConfigPaths = {
 
 const projectConfigVars = {};
 const projectConfigVarsDefaults = {
-  useDashboard: false,
-  useBabelPolyfill: 'entry',
-  useSourceMaps: true,
-  useAwesomeLoader: false,
+  dashboard: false,
+  babelPolyfill: 'entry',
+  sourceMaps: true,
+  awesomeLoader: false,
   supportedBrowsers: ['>0.25%'],
 };
 
 const configure = function(env) {
   Object.assign(projectConfigVars, {
-    useDashboard: env.useDashboard
-      ? env.useDashboard == 'true'
-      : projectConfigVarsDefaults.useDashboard,
-    useBabelPolyfill: env.useBabelPolyfill
-      ? env.useBabelPolyfill
-      : projectConfigVarsDefaults.useBabelPolyfill,
-    useSourceMaps: env.useSourceMaps
-      ? env.useSourceMaps == 'true'
-      : projectConfigVarsDefaults.useSourceMaps,
-    useAwesomeLoader: env.useAwesomeLoader
-      ? env.useAwesomeLoader == 'true'
-      : projectConfigVarsDefaults.useAwesomeLoader,
+    dashboard: env.dashboard
+      ? env.dashboard == 'true'
+      : projectConfigVarsDefaults.dashboard,
+    babelPolyfill: env.babelPolyfill
+      ? env.babelPolyfill
+      : projectConfigVarsDefaults.babelPolyfill,
+    sourceMaps: env.sourceMaps
+      ? env.sourceMaps == 'true'
+      : projectConfigVarsDefaults.sourceMaps,
+    awesomeLoader: env.awesomeLoader
+      ? env.awesomeLoader == 'true'
+      : projectConfigVarsDefaults.awesomeLoader,
     supportedBrowsers: env.supportedBrowsers
       ? env.supportedBrowsers.split(',').map(s => s.trim())
       : projectConfigVarsDefaults.supportedBrowsers,
