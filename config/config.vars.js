@@ -4,6 +4,7 @@ const projectConfigPaths = {
   root: path.resolve(__dirname, '..'),
   src: path.resolve(__dirname, '../src'),
   dist: path.resolve(__dirname, '../dist'),
+  public: '',
   srcFilename: 'index.tsx',
 };
 
