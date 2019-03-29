@@ -28,7 +28,7 @@
   "globals": {
     "window": {}
   },
-  "setupTestFrameworkScriptFile": "<rootDir>/config/jest.framework.setup.js",
+  "setupFilesAfterEnv": ["<rootDir>/config/jest.framework.setup.js"],
   "setupFiles": ["<rootDir>/config/jest.stubs.setup.js"],
   "moduleNameMapper": {
     ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
